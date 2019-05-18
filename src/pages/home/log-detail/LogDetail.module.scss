@@ -1,0 +1,205 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 1.5rem;
+  @include scrollbar-hide;
+  .logContainer {
+    background-color: #fff;
+    margin-top: 0.4rem;
+    padding: 0 0.3rem 0.3rem 0.3rem;
+  }
+  .logHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+
+    .author {
+      height: 100%;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      .avatar {
+        height: 0.8rem;
+        width: 0.8rem;
+        flex-shrink: 0;
+        @include image-container-circle;
+        .avatarImage {
+          height: 100%;
+          width: 100%;
+        }
+        .userIcon {
+          font-size: 0.72rem;
+        }
+      }
+
+      .user {
+        width: 80%;
+        margin-left: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .nicknameContainer {
+          display: flex;
+          .nickname {
+            display: block;
+            font-size: 0.36rem;
+            margin-right: 0.2rem;
+            @include text-ellipsis;
+          }
+          .sexIcon {
+            font-size: 0.38rem;
+          }
+        }
+        .time {
+          font-size: 0.28rem;
+          color: #aaa;
+        }
+      }
+    }
+
+    .topping {
+      display: flex;
+      align-items: center;
+      .privateIcon {
+        color: $main-color;
+        font-size: 0.48rem;
+        margin-right: 0.2rem;
+      }
+      .toppingIcon {
+        color: #d01f12;
+        font-size: 0.48rem;
+        margin-right: 0.2rem;
+      }
+      .toppingText {
+        font-size: 0.38rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .logContent {
+    font-size: 0.28rem;
+    color: #888;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .imageContainer {
+    margin-top: 0.4rem;
+    .oneLogImage {
+      width: 4.2rem;
+      height: 2.5rem;
+    }
+    .imageWall {
+      display: flex;
+      flex-wrap: wrap;
+      .moreLogImage {
+        height: 1.85rem;
+        width: 1.85rem;
+        margin-left: 0.3rem;
+        margin-bottom: 0.3rem;
+      }
+    }
+  }
+
+  .record {
+    .likeCount {
+      font-size: 0.28rem;
+    }
+    .commentCount {
+      font-size: 0.28rem;
+      margin-left: 0.4rem;
+    }
+  }
+
+  .comment {
+    margin-top: 0.4rem;
+    background-color: #fff;
+    .commentHeader {
+      height: 1rem;
+      padding: 0 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 0.02rem solid #ccc;
+      .text {
+        font-weight: bold;
+        color: $main-color;
+      }
+      .sort {
+        padding: 0.05rem 0.1rem;
+        display: flex;
+        align-items: center;
+        border: 0.02rem solid #bbb;
+        border-radius: 0.1rem;
+        font-size: 0.28rem;
+      }
+    }
+
+    .empty {
+      height: 4rem;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.6rem;
+      color: #aaa;
+      .emptyIcon {
+        font-size: 1rem;
+      }
+    }
+
+    .commentItem {
+      padding: 0 0.4rem 0.4rem 0.4rem;
+      border-bottom: 0.02rem solid #ddd;
+      position: relative;
+      .deleteIcon {
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+      }
+      .commentContent {
+        font-size: 0.28rem;
+        color: #888;
+        line-height: 1.8;
+        text-align: justify;
+      }
+    }
+  }
+
+  .messageContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    margin-top: 0.4rem;
+    .message {
+      height: 1rem;
+      width: 50%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0.02rem solid #eee;
+      &:active {
+        background-color: #eee;
+      }
+      .messageIcon {
+        font-size: 0.4rem;
+        margin-right: 0.2rem;
+      }
+      .likeIcon {
+        color: #d01f12;
+        font-size: 0.4rem;
+        margin-right: 0.2rem;
+      }
+    }
+  }
+}

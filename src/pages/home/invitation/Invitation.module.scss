@@ -1,0 +1,118 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 1.5rem;
+  @include scrollbar-hide;
+  .invitationContainer {
+    background-color: #fff;
+    margin-top: 0.4rem;
+    padding: 0 0.3rem 0.5rem 0.3rem;
+  }
+  .invitationHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 0.02rem solid #ccc;
+
+    .author {
+      height: 100%;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      .avatar {
+        height: 0.8rem;
+        width: 0.8rem;
+        flex-shrink: 0;
+        @include image-container-circle;
+        .avatarImage {
+          height: 100%;
+          width: 100%;
+        }
+        .userIcon {
+          font-size: 0.72rem;
+        }
+      }
+
+      .user {
+        width: 80%;
+        margin-left: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .nicknameContainer {
+          display: flex;
+          .nickname {
+            display: block;
+            font-size: 0.36rem;
+            margin-right: 0.2rem;
+            @include text-ellipsis;
+          }
+          .sexIcon {
+            font-size: 0.38rem;
+          }
+        }
+        .time {
+          font-size: 0.28rem;
+          color: #aaa;
+        }
+      }
+    }
+  }
+
+  .invitationContent {
+    margin-top: 0.4rem;
+    font-size: 0.28rem;
+    color: #888;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .buttonContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin-top: 0.4rem;
+    .button {
+      height: 1rem;
+      width: 50%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      &:active {
+        opacity: 0.7;
+      }
+      .buttonIcon {
+        font-size: 0.4rem;
+        margin-right: 0.2rem;
+      }
+    }
+
+    .refuse {
+      background-color: #e94f4f;
+    }
+
+    .accept {
+      background-color: #3df049;
+    }
+
+    .isRefuse {
+      height: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background-color: #d01f12;
+      opacity: 0.5;
+    }
+  }
+}

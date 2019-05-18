@@ -1,0 +1,161 @@
+@import '@/assets/styles/mixins.scss';
+
+.habitList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.4rem;
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.empty {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+  color: #aaa;
+  .emptyIcon {
+    font-size: 1rem;
+  }
+}
+
+.habitItemContainer {
+  width: 90%;
+}
+
+.habitItem {
+  width: 100%;
+  border-radius: 0.2rem;
+  margin-top: 0.4rem;
+  background-color: #fff;
+  box-shadow: 0 0.04rem 0.04rem rgba(11, 18, 24, 0.3);
+  .habit {
+    height: 1.4rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 0.2rem 0.2rem 0 0;
+    .dayTimeIcon {
+      margin-left: 0.2rem;
+      font-size: 1rem;
+    }
+    .habitDetail {
+      width: 4.8rem;
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.15rem;
+      .name {
+        font-size: 0.44rem;
+        font-weight: bold;
+      }
+      .motto {
+        font-size: 0.28rem;
+        @include text-ellipsis;
+      }
+    }
+    .star {
+      font-size: 0.6rem;
+      position: absolute;
+      right: 0.2rem;
+    }
+  }
+
+  .recordContainer {
+    height: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .record {
+      max-width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      .recordText {
+        font-size: 0.36rem;
+        font-weight: bold;
+        line-height: 0.7rem;
+      }
+      .recordDaysContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .recordDays {
+          display: inline-block;
+          max-width: 80%;
+          margin-right: 0.1rem;
+          @include text-ellipsis;
+        }
+      }
+
+      .processing {
+        font-size: 0.36rem;
+        font-weight: bold;
+        color: #00bcd4;
+      }
+      .undone {
+        font-size: 0.36rem;
+        font-weight: bold;
+        color: #d01f12;
+      }
+      .completed {
+        font-size: 0.36rem;
+        font-weight: bold;
+        color: #49b150;
+      }
+    }
+  }
+
+  .supervise {
+    height: 1rem;
+    border-radius: 0 0 0.2rem 0.2rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.4rem;
+    border-top: 0.04rem solid #eee;
+  }
+
+  .user {
+    margin-left: 0.1rem;
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      height: 0.8rem;
+      width: 0.8rem;
+      @include image-container-circle;
+      margin-right: 0.2rem;
+      .image {
+        height: 100%;
+        width: 100%;
+      }
+      .userIcon {
+        font-size: 0.64rem;
+      }
+    }
+  }
+}
+
+.allDayColor {
+  background-color: #80dd84;
+}
+
+.morningColor {
+  background-color: #e18184;
+}
+
+.afternoonColor {
+  background-color: #dbbc4b;
+}
+
+.eveningColor {
+  background-color: #82cedf;
+}

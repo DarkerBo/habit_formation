@@ -1,0 +1,90 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  position: relative;
+  .imageContainer {
+    height: 5rem;
+    .image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .better {
+    // color: #bfc5cc;
+    color: $main-color;
+    margin-top: 0.6rem;
+    text-align: center;
+    font-size: 0.4rem;
+  }
+
+  .start {
+    color: #9b9ea1;
+    margin-top: 0.1rem;
+    text-align: center;
+  }
+
+  .inputContainer {
+    margin-top: 0.6rem;
+    .inputItem {
+      position: relative;
+      text-align: center;
+      margin-top: 0.2rem;
+      .inputIcon {
+        font-size: 0.48rem;
+        color: $main-color;
+      }
+      .passwordIcon {
+        font-size: 0.48rem;
+        color: $main-color;
+        position: absolute;
+        right: 1.2rem;
+      }
+      .input {
+        width: 60%;
+        padding: 0.2rem 0.7rem 0.2rem 0.1rem;
+        box-sizing: border-box;
+        margin-left: 0.2rem;
+        border: none;
+        border-bottom: 2px solid $main-color;
+      }
+    }
+  }
+
+  .operate {
+    height: 1.8rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0.4rem;
+    .buttonContainer {
+      height: 0.9rem;
+      display: flex;
+      justify-content: center;
+      .operateButton {
+        width: 70%;
+        color: #fff;
+        background-color: $main-color;
+        text-align: center;
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        border-radius: 0.48rem;
+        &:active {
+          color: #eee;
+          background-color: #967fbee3;
+        }
+      }
+    }
+
+    .operateText {
+      color: $main-color;
+      text-align: center;
+      margin-top: 0.3rem;
+      &:active {
+        color: #967fbee3;
+      }
+    }
+  }
+}

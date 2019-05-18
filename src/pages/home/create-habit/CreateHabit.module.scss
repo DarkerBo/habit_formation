@@ -1,0 +1,13 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  @include scrollbar-hide;
+  .operation {
+    margin-top: 0.2rem;
+    .operationIcon {
+      font-size: 0.5rem;
+    }
+  }
+}

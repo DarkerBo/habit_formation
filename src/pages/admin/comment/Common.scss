@@ -1,0 +1,25 @@
+.commentContainer {
+  .toppingBtn.ant-btn-danger {
+    color: #49b051;
+  }
+
+  .toppingBtn.ant-btn-danger:hover {
+    color: #fff;
+    background-color: #49b051;
+  }
+
+  .untoppingBtn.ant-btn-danger {
+    color: #1895ee;
+  }
+
+  .untoppingBtn.ant-btn-danger:hover {
+    color: #fff;
+    background-color: #1895ee;
+  }
+
+  .ant-popover-inner-content {
+    width: 400px;
+    word-break: break-all;
+    white-space: normal;
+  }
+}

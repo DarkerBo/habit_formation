@@ -1,0 +1,31 @@
+$main-color: #624196e3;
+
+// 单行文字超出省略
+@mixin text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 隐藏滑动条
+@mixin scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// 顶部tab栏样式
+@mixin navbar-top {
+  background-color: $main-color;
+  box-shadow: 0 0 0.12rem rgba(37, 47, 57, 0.3);
+}
+
+// image圆形容器
+@mixin image-container-circle {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

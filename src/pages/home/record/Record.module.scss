@@ -1,0 +1,10 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  .plus {
+    font-size: 0.48rem;
+  }
+}

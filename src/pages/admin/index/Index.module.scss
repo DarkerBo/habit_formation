@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e7e8ec;
+  .header {
+    height: 80px;
+  }
+
+  .wrap {
+    display: flex;
+    height: calc(100vh - 80px);
+    .nav {
+      height: 100%;
+      width: 240px;
+      flex-shrink: 0;
+    }
+    .content {
+      flex: 1;
+      overflow-y: auto;
+    }
+  }
+}

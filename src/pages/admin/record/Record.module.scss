@@ -1,0 +1,117 @@
+.container {
+  padding: 10px 10px 0 10px;
+  overflow-y: auto;
+  .cardContainer {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .card {
+      height: 150px;
+      width: 300px;
+      opacity: 0.8;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      cursor: pointer;
+      border-radius: 10px;
+      &:hover {
+        opacity: 1;
+      }
+      .number {
+        font-size: 50px;
+        margin-top: 10px;
+        margin-left: 30px;
+      }
+      .name {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 30px;
+      }
+      .cardIcon {
+        font-size: 50px;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+      }
+    }
+  }
+
+  .listContainer {
+    min-height: 400px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 0 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    .headerTitle {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .headerTime {
+      font-size: 18px;
+      font-weight: bold;
+      color: #4a52b4;
+      margin-right: 20px;
+    }
+  }
+
+  .list {
+    min-height: 376px;
+    list-style: none;
+    padding: 0;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    .listItem {
+      height: 60px;
+      width: 47%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      margin-left: 20px;
+      padding: 0 10px;
+      border: 1px solid #e9e9e9;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(10, 17, 23, 0.06);
+      .user {
+        .username {
+          font-size: 16px;
+          color: #696663;
+          margin-left: 10px;
+        }
+      }
+      .habit {
+        font-size: 18px;
+        font-weight: bold;
+        color: #666fbc;
+      }
+      .successIcon {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .pagination {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}

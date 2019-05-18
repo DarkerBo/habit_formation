@@ -1,0 +1,11 @@
+.recordtabsContainer {
+  .am-tabs-tab-bar-wrap {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+}

@@ -1,0 +1,81 @@
+.container {
+  padding: 10px 10px 0 10px;
+  overflow-y: auto;
+  .basic {
+    width: 100%;
+    min-height: 620px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 20px 35%;
+    .title {
+      font-size: 26px;
+      font-weight: bold;
+      color: #666;
+      text-align: center;
+    }
+    .formContainer {
+      .view {
+        //头像展示容器样式
+        position: relative;
+        height: 300px;
+        width: 300px;
+        border: #ccc 1px solid;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        // hover时将图片透明度设为从1到0.1
+        .pictureImg {
+          height: 250px;
+          width: 250px;
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover .pictureImg {
+          opacity: 0.1;
+        }
+
+        // hover时将图片透明度设为从1到0.1
+        .pictureIcon {
+          font-size: 150px;
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover .pictureIcon {
+          opacity: 0.1;
+        }
+
+        .upload {
+          // 脱离文档流，不与图片一起横放，而是叠在图片上面
+          position: absolute;
+          opacity: 0;
+          z-index: 10;
+          .uploadIcon {
+            font-size: 100px;
+          }
+          .uploadText {
+            font-weight: bold;
+          }
+        }
+
+        // hover时将icon透明度设为从0到0.8
+        &:hover .upload {
+          opacity: 0.8;
+          transition: 0.8s ease-in-out;
+        }
+      }
+
+      .btnGroup {
+        width: 100%;
+        .saveBtn {
+          width: 300px;
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+}

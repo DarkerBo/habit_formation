@@ -1,0 +1,25 @@
+.btnGroup2 {
+  .encourageBtn {
+    margin-right: 40px;
+    margin-left: 20px;
+  }
+  .encourageBtn.ant-btn-primary {
+    background-color: #409a40;
+    border-color: #409a40;
+  }
+
+  .encourageBtn.ant-btn-primary:hover {
+    background-color: #62b862;
+    border-color: #62b862;
+  }
+
+  .remindBtn.ant-btn-primary {
+    background-color: #f2401e;
+    border-color: #f2401e;
+  }
+
+  .remindBtn.ant-btn-primary:hover {
+    background-color: #fa6161;
+    border-color: #fa6161;
+  }
+}

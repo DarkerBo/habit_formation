@@ -1,0 +1,33 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  @include scrollbar-hide;
+  .title {
+    color: #000;
+    font-size: 0.44rem;
+    font-weight: bold;
+    padding-left: 0.4rem;
+    margin: 0.8rem 0 0.6rem 0;
+  }
+  .empty {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    color: #aaa;
+    .emptyIcon {
+      font-size: 1rem;
+    }
+  }
+  .stepsContainer {
+    padding-left: 0.4rem;
+    .passIcon {
+      font-size: 0.52rem;
+    }
+  }
+}

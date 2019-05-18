@@ -1,0 +1,57 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  // border-bottom: 3px solid #eee;
+  background-color: #2a373f;
+  .nameContainer {
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    .nameIcon {
+      font-size: 24px;
+      color: #fff;
+    }
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      margin-left: 10px;
+    }
+  }
+
+  .rightContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    .admin {
+      margin-right: 100px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        color: #aaa;
+      }
+    }
+
+    // 头像框样式
+    .avatar {
+      height: 35px;
+      width: 35px;
+      margin-right: 10px;
+      background-color: #fff;
+      @include image-container-circle;
+      .image {
+        height: 100%;
+        width: 100%;
+      }
+      .icon {
+        font-size: 25px;
+      }
+    }
+  }
+}

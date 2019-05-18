@@ -1,0 +1,20 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  @include scrollbar-hide;
+  padding-bottom: 1.5rem;
+  .edit {
+    font-size: 0.48rem;
+  }
+
+  .bannerContainer {
+    height: 3rem;
+    .bannerImage {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

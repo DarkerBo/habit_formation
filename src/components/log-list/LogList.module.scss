@@ -1,0 +1,156 @@
+@import '@/assets/styles/mixins.scss';
+
+.logList {
+  .empty {
+    height: 4rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    color: #aaa;
+    .emptyIcon {
+      font-size: 1rem;
+    }
+  }
+  .logItem {
+    background-color: #fff;
+    margin-top: 0.4rem;
+
+    .contentContainer {
+      padding: 0 0.3rem;
+    }
+  }
+}
+
+.empty {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+  color: #aaa;
+  .emptyIcon {
+    font-size: 1rem;
+  }
+}
+
+.logHeader {
+  height: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .author {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    .avatar {
+      height: 0.8rem;
+      width: 0.8rem;
+      flex-shrink: 0;
+      @include image-container-circle;
+      .avatarImage {
+        height: 100%;
+        width: 100%;
+      }
+      .userIcon {
+        font-size: 0.72rem;
+      }
+    }
+
+    .nickname {
+      font-size: 0.36rem;
+      margin: 0 0.3rem 0 0.2rem;
+      @include text-ellipsis;
+    }
+
+    .sexIcon {
+      font-size: 0.38rem;
+    }
+  }
+
+  .topping {
+    display: flex;
+    align-items: center;
+    .toppingIcon {
+      color: #d01f12;
+      font-size: 0.48rem;
+      margin-right: 0.2rem;
+    }
+    .privateIcon {
+      color: $main-color;
+      font-size: 0.48rem;
+      margin-right: 0.2rem;
+    }
+    .toppingText {
+      font-size: 0.38rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.habitContainer {
+  display: flex;
+  justify-content: space-between;
+  .habit {
+    font-size: 0.28rem;
+    color: #aaa;
+  }
+}
+
+.content {
+  font-size: 0.28rem;
+  color: #888;
+  line-height: 1.8;
+  text-align: justify;
+  margin-top: 0.4rem;
+}
+
+.imageContainer {
+  margin-top: 0.4rem;
+  .oneLogImage {
+    width: 4.2rem;
+    height: 2.5rem;
+  }
+  .imageWall {
+    display: flex;
+    flex-wrap: wrap;
+    .moreLogImage {
+      height: 1.85rem;
+      width: 1.85rem;
+      margin-left: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+  }
+}
+
+.messageContainer {
+  display: flex;
+  margin-top: 0.4rem;
+  .message {
+    height: 0.8rem;
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.02rem solid #eee;
+    &:active {
+      background-color: #eee;
+    }
+    .messageIcon {
+      font-size: 0.4rem;
+      margin-right: 0.2rem;
+    }
+    .likeIcon {
+      color: #d01f12;
+      font-size: 0.4rem;
+      margin-right: 0.2rem;
+    }
+  }
+}

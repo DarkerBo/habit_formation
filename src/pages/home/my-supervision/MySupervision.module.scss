@@ -1,0 +1,7 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  @include scrollbar-hide;
+}

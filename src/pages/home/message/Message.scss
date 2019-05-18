@@ -1,0 +1,27 @@
+.modal {
+  width: 60%;
+  margin: 0 auto;
+  user-select: none;
+  border-radius: 0.2rem;
+  .message-read {
+    width: 100%;
+    font-size: 0.36rem;
+    color: #3a3a3a;
+    padding-bottom: 0.1rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    &:hover {
+      color: #aaa;
+    }
+  }
+  .message-delete {
+    width: 100%;
+    font-size: 0.36rem;
+    color: #3a3a3a;
+    padding-top: 0.1rem;
+    box-sizing: border-box;
+    &:hover {
+      color: #aaa;
+    }
+  }
+}

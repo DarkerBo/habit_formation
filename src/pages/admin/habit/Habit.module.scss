@@ -1,0 +1,147 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  padding: 10px 10px 0 10px;
+  overflow-y: auto;
+  .manageContainer {
+    height: 130px;
+    width: 100%;
+    background-color: #fff;
+    .manageForm {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .manageFormItem {
+        margin-left: 40px;
+      }
+      .queryButton {
+        margin-left: 30px;
+      }
+      .resetButton {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .cardContainer {
+    min-height: 310px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .cardItem {
+      width: 410px;
+      height: 220px;
+      background-color: #fff;
+      margin-top: 10px;
+      margin-right: 9.7px;
+      display: flex;
+      .message {
+        width: 230px;
+        height: 100%;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        margin-left: 20px;
+        .nameContainer {
+          display: flex;
+          align-items: center;
+          .name {
+            font-size: 20px;
+            color: #4265c1;
+            margin-right: 30px;
+            @include text-ellipsis;
+          }
+        }
+
+        .motto {
+          color: #2a282b;
+          margin-top: 10px;
+          @include text-ellipsis;
+        }
+      }
+
+      .userContainer {
+        margin-top: 10px;
+        .username {
+          margin-left: 10px;
+        }
+        .processing {
+          margin-left: 10px;
+          font-weight: bold;
+          color: #00bcd4;
+        }
+        .undone {
+          margin-left: 10px;
+          font-weight: bold;
+          color: #d01f12;
+        }
+        .completed {
+          margin-left: 10px;
+          font-weight: bold;
+          color: #49b150;
+        }
+      }
+
+      .btnGroup {
+        margin-top: 20px;
+      }
+    }
+
+    .timeContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px;
+      .time {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        .createdTime {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+      .frequency {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      .frequencyDay {
+        margin-bottom: 10px;
+      }
+      .dayContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        .dayNumber {
+          font-size: 26px;
+          font-weight: bold;
+          color: #825cc3;
+        }
+      }
+    }
+    .pageinationContainer {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      padding: 10px 0;
+      background-color: #fff;
+    }
+  }
+
+  .emptyContainer {
+    height: 480px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+    position: relative;
+    .empty {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

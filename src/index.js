@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './utils/rem';
+import initReactFastclick from 'react-fastclick';
+
+// 移动端300ms点击延迟
+initReactFastclick();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

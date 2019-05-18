@@ -1,0 +1,4 @@
+// 模态框点击蒙层会报错(chrome的bug)，这里不允许点击
+.am-modal-wrap {
+  touch-action: none;
+}

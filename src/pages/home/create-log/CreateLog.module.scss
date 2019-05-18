@@ -1,0 +1,61 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  .imageWallContainer {
+    min-height: 2.8rem;
+    margin-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    .imageWallItem {
+      height: 30vw;
+      width: 30vw;
+      margin-left: 0.2rem;
+      margin-top: 0.2rem;
+      position: relative;
+      .image {
+        width: 100%;
+        height: 100%;
+      }
+      .deleteIcon {
+        font-size: 0.36rem;
+        position: absolute;
+        top: -0.12rem;
+        right: -0.12rem;
+      }
+    }
+
+    .addImage {
+      height: 30vw;
+      width: 30vw;
+      margin-left: 0.2rem;
+      margin-top: 0.2rem;
+      border: 0.04rem solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ddd;
+      position: relative;
+      &:active {
+        border-color: #eee;
+        color: #eee;
+      }
+      .plusIcon {
+        font-size: 0.7rem;
+      }
+      .fileInput {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+        opacity: 0;
+      }
+    }
+  }
+
+  .operation {
+    margin-top: 0.2rem;
+  }
+}

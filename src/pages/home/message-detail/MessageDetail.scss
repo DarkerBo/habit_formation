@@ -1,0 +1,14 @@
+.message-detail-bottom-bar {
+  .am-list-item {
+    min-height: 0.6rem;
+  }
+
+  .am-textarea-control {
+    width: 3.8rem;
+    padding: 4px 8px 4px 0;
+    > textarea {
+      max-height: 2rem;
+      overflow-y: auto;
+    }
+  }
+}

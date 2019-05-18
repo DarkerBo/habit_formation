@@ -1,0 +1,46 @@
+.container {
+  background-color: #eee;
+  height: 100vh;
+  // 登陆框样式
+  .wrap {
+    width: 400px;
+    height: 300px;
+    padding: 30px 50px 0;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    margin-left: -200px;
+    top: 150px;
+    margin-bottom: 150px;
+    border-radius: 5px 0 5px 5px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-width: 0 16px 16px 0;
+      border-style: solid;
+      border-color: #fff;
+      background: #fff;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+      display: block;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .wrap.rounded {
+    border-radius: 5px 0 5px 5px;
+  }
+
+  // 右上角的小三角样式
+  .wrap.rounded:before {
+    border-width: 8px;
+    border-color: #eee #eee transparent transparent;
+    border-radius: 0 0 0 5px;
+  }
+}

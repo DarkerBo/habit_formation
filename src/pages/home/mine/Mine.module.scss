@@ -1,0 +1,93 @@
+@import '@/assets/styles/mixins.scss';
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  @include scrollbar-hide;
+  .imageContainer {
+    display: block;
+    height: 3.5rem;
+    background-color: #ccc;
+    position: relative;
+    .image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .user {
+    height: 2.8rem;
+    background-color: #fff;
+    padding-top: 0.1rem;
+    position: relative;
+    .avatarContainer {
+      height: 1.3rem;
+      width: 1.3rem;
+      background-color: #fff;
+      @include image-container-circle;
+      position: absolute;
+      left: 0.4rem;
+      top: -0.4rem;
+      .avatar {
+        height: 1.2rem;
+        width: 1.2rem;
+        box-sizing: border-box;
+        @include image-container-circle;
+        .avatarImage {
+          height: 100%;
+          width: 100%;
+        }
+
+        .userIcon {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .nickname {
+      max-width: 5rem;
+      margin-left: 2rem;
+      font-size: 0.32rem;
+      color: #000;
+      @include text-ellipsis;
+      .sexIcon {
+        font-size: 0.38rem;
+        margin-left: 0.2rem;
+      }
+    }
+
+    .motto {
+      margin-top: 0.15rem;
+      max-width: 5rem;
+      margin-left: 2rem;
+      font-size: 0.28rem;
+      @include text-ellipsis;
+    }
+
+    .record {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: space-around;
+      .recordItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .recordTitle {
+          font-size: 0.28rem;
+        }
+        .recordValue {
+          color: $main-color;
+          font-size: 0.4rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .operation {
+    margin-top: 0.2rem;
+    .operationIcon {
+      font-size: 0.5rem;
+    }
+  }
+}
