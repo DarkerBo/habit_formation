@@ -2,7 +2,11 @@ import axios from './config';
 
 // 创建或修改公告图接口
 export const createOrEditBanner = async params => {
-  return await axios.post('/banner/createOrEditBanner', params);
+  return await axios.post('/banner/createOrEditBanner', params, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  });
 };
 
 // 获取公告图信息接口
