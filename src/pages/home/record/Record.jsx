@@ -54,7 +54,7 @@ class HomeRecord extends Component {
 
   // 切换tab事件
   changeTabs = async (tabs, index) => {
-    const { pageNo, pageSize } = this.state;
+    const { pageSize } = this.state;
 
     await this.setState({ pageNo: 1, habitInfoData: [] });
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import asyncComponent from '@/common/hoc/AsyncComponent';
 import HomeIntercept from './home-intercept';
 import AdminIntercept from './admin-intercept';

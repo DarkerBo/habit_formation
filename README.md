@@ -1,68 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 习惯养成系统（前端部分）
 
-## Available Scripts
+### 前言
 
-In the project directory, you can run:
+本项目基于 React.js 框架实现。主要实现了 习惯打卡、消息管理、日志分享、个人信息、管理员后台管理等功能，形成一个培养习惯、心得分享、消息交流、管理员信息管理的闭环。
 
-### `npm start`
+[后端项目地址猛戳这里](https://github.com/DarkerBo/habit_formation_node)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+### 技术栈
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] **主要开发框架：** React
+- [x]  **前端路由：** React-Router
+- [x]  **状态管理：** Redux Thunk
+- [x]  **构建工具：** Webpack
+- [x] **CSS预处理器：** Sass/Scss
+- [x] **数据请求：** Axios
+- [x] **UI 框架：** Ant Design Mobile
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### 项目主要结构
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+├── src             
+│   └── assets           // 静态资源 如图片资源
+│   └── common           // 公共文件 如页面复用的高阶组件
+│   └── components       // 公共组件 如侧边导航栏
+│   └── pages            
+│        └── admin       // 管理员相关页面
+│        └── error-page  // 错误提示页面 如404页面
+│        └── home        // 普通用户相关页面
+│   └── routers          // 路由
+│   └── services         // 接口
+│   └── store            // 状态管理
+│   └── untils           // 工具函数
+│   └── App.jsx          
+│   └── index.js         
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 运行效果图
 
-## Learn More
+* **习惯打卡**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![习惯打卡](/screenshots/习惯打卡.gif)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* **习惯记录**
 
-### Code Splitting
+![习惯记录](/screenshots/习惯记录.gif)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* **日志分享**
 
-### Analyzing the Bundle Size
+![日志分享](/screenshots/日志分享.gif)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* **消息交流**
 
-### Making a Progressive Web App
+![消息交流](/screenshots/消息交流.gif)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+* **个人信息管理**
 
-### Advanced Configuration
+![个人信息管理](/screenshots/个人信息管理.gif)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+* **后台管理**
 
-### Deployment
+![后台管理](/screenshots/后台管理.gif)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### 注意事项
+
+在开发该项目的时候，React Hook 还在提出概念阶段，还未正式推行，因此完成该项目是使用 Class 组件的形式开发的。
+
+
+
+
+
+
+
+
+
+
+

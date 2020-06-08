@@ -102,7 +102,7 @@ class HomeToday extends Component {
     const req = { id: cid, habit_id, status: cstatus === '1' ? '0' : '1' };
     const result = await createOrEditClock(req);
     if (result.data.code === '0') {
-      Toast.info(cstatus === '0' ? '打卡成功' : '已取消打卡', 1);
+      Toast.info(cstatus === '1' ? '已取消打卡' : '打卡成功', 1);
       const statusResult = await changeUserHabitStatus({ habit_id });
       if (statusResult.data.code === '1') return Toast.info(statusResult.data.message, 1);
       const changeStatusIndex = habitInfoData.findIndex(item => item.id === habit_id);
@@ -117,7 +117,7 @@ class HomeToday extends Component {
   };
 
   // 渲染对应时分的习惯
-  renderHabit = item => {
+  renderHabit = (item, index) => {
     const dayTimeObj = {
       '0': { icon: 'icon-icon-', color: styles.allDayColor },
       '1': { icon: 'icon-zaoshang', color: styles.morningColor },
@@ -132,7 +132,7 @@ class HomeToday extends Component {
     return (
       <div
         className={classNames(itemClass ? styles.habitItem : styles.disableItem, dayTimeObj[item.time_of_days].color)}
-        key={item.id}
+        key={index}
         onClick={() => this.clockOn(item.cid, item.id, item.cstatus, itemClass)}
       >
         <i className={classNames(styles.dayTimeIcon, dayTimeObj[item.time_of_days].icon, 'iconfont')} />
@@ -186,7 +186,7 @@ class HomeToday extends Component {
               <span>今天没有要打卡的习惯~</span>
             </div>
           ) : (
-            <>{habitInfoData.map(item => this.renderHabit(item))}</>
+            <>{habitInfoData.map((item, index) => this.renderHabit(item, index))}</>
           )}
         </div>
       </div>
